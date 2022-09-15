@@ -1,0 +1,28 @@
+<html>
+<head></head>
+<body>
+<div style="display: table; margin: 20px auto 0 auto; padding: 20px; border: 1px solid grey">
+What is Bitcoin price today?<br><br>
+<input type="text" value="" placeholder="21000" id="price"><br><br>
+How much $ do you have?<br><br>
+<input type="text" value="" placeholder="1000" id="money"><br><br>
+You can buy <span id="qtyBTC" style="font-weight: bold">0</span> BTC
+</div>
+<script>
+    let price = document.getElementById('price');
+    let money = document.getElementById('money');
+    let qtyBTC = document.getElementById('qtyBTC');
+
+    price.addEventListener("keyup", () => {
+        calculate();
+    });
+    money.addEventListener("keyup", () => {
+        calculate();
+    });
+
+    function calculate() {
+        qtyBTC.innerHTML = money.value / price.value;
+    }
+</script>
+</body>
+</html>
