@@ -21,6 +21,7 @@ You can buy <span id="qtyBTC" style="font-weight: bold">0</span> BTC
     });
 
     function calculate() {
+        if (price.value > 0)
         qtyBTC.innerHTML = money.value / price.value;
     }
 </script>
